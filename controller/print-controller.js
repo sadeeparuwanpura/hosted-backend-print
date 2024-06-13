@@ -31,7 +31,7 @@ const printFunction = async (req, res) => {
             console.error('Connection error:', err);
             if (!responseSent) {
                 responseSent = true;
-                res.status(500).json({ error: 'Failed to connect to local app' });
+                res.status(500).json({ error: `Failed to connect to local app:${err}` });
             }
         });
 
