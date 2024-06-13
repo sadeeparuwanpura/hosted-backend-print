@@ -15,7 +15,7 @@ const printFunction = async (req, res) => {
 
         socket.on('connect_error', (err) => {
             console.error('Connection error:', err);
-            res.status(500).json({ error: 'Failed to connect to local app' });
+            res.status(500).json({ error: err });
         });
     } catch (error) {
         console.error('Error in printFunction:', error);
