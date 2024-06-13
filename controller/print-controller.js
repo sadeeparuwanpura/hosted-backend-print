@@ -7,7 +7,7 @@ const printFunction = async (req, res) => {
 
     try {
         const socket = io('http://192.168.21.232:4005', {
-            timeout: 5000
+            timeout: 15000
         });
 
         // Emit event to get print details and handle the response
